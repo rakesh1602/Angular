@@ -1,0 +1,20 @@
+mat-drawer {
+    width: 260px;
+    height: 100vh;
+  }:host {
+    display:grid;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-drawer {
+    width: 260px;
+  }
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+  mat-drawer {
+    background: #0f172a;
+  }
+  

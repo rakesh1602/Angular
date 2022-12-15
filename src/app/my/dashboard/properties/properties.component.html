@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-8 mt-4">
+        <mat-card>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <mat-card-title>Properties</mat-card-title>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 d-flex">
+                    <input class="form-control mt-4" type="text" placeholder="Search" (ngModel)="(searchBy)" />
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <!-- <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                            checked />
+                        <label class="btn" for="btnradio1" (click)="filterProduct('all')">ALL</label> -->
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+                        <label class="btn" for="btnradio2" (click)="filterProduct('popular')">Popular</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
+                        <label class="btn" for="btnradio3" (click)="filterProduct('new jersey')">NewJersey</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
+                        <label class="btn" for="btnradio4" (click)="filterProduct('colorado')">Colorado</label>
+                        
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" />
+                        <label class="btn" for="btnradio5" (click)="filterProduct('albama')">Albama</label>
+                    </div>
+                </div>
+            </div>
+            <!-- product button and search bar code end  -->
+        </mat-card>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-3" *ngFor="let propertie of filterPropertiesArray">
+        <mat-card>
+        <div class="col-lg-8 col-md-8 col-sm-8 mt-3">
+            <span ngClass="for" [ngStyle]="{ 'background-color': propertie.color }">{{
+                propertie.for
+                }}</span>
+            <h2 ngClass="name"><mat-card-title>{{propertie.name }}</mat-card-title></h2>
+            <span ngClass="location"><mat-card-subtitle>{{propertie.location }}</mat-card-subtitle></span>
+            <span ngClass="price">{{ propertie.price | currency : "INR" }}</span>
+            <span ngClass="priceSqft">{{ propertie.priceSqft }}</span>
+            <a ngClass="link" href="">Check in detail</a>
+            <!-- <span>{{package.}}</span>   -->
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 mt-4">
+            <img ngClass="image" [src]="propertie.image" alt="" />
+        </div>
+    </mat-card>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<mat-drawer-container>
+  <mat-drawer-content>
+    <app-widgets></app-widgets>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm mt-3">
+          <app-current-plan></app-current-plan>
+        </div>
+        <div class="col-sm mt-3">
+          <app-graph></app-graph>
+        </div>
+        <div class="col-sm mt-3">
+          <app-advertisement></app-advertisement>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-employees></app-employees>
+      </div>
+    </div>
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6"><app-properties></app-properties></div>
+  <div class="col-6"><app-recentactivity></app-recentactivity></div>
+</div>
+  </mat-drawer-content>
+</mat-drawer-container>

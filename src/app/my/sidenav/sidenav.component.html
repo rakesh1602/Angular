@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <ul class="nav-links" id="nav-links">
+        <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
+            <div class="dropdown-title" (click)="showSubmenu(itemEl)">
+                <a>
+                
+                    <mat-icon [class]="item.icon">{{item.icon}}</mat-icon>
+
+                    <span class="link_name" [routerLink]="[item.link]">{{item.link_name}}</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name">{{item.link_name}}</a></li>
+                <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+                   <div class="sub-menu-mat-icon"><mat-icon [class]="item.icon">{{item_sub.icon}}</mat-icon>
+                    <a [routerLink]="[item_sub.link]">{{item_sub.link_name}}</a>
+                </div> 
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

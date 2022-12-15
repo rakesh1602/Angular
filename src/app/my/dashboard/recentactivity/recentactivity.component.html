@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-6 mt-4 px-6">
+
+    <mat-card>
+    <mat-card-title>Recent activity here</mat-card-title>
+    <div class="activity-feed">
+      <div *ngFor="let activity of RecentActivity">
+        
+        <span ngClass="day">{{ activity.day }}</span>
+        <div class="container">
+          <div class="row mt-2 feed-item" *ngFor="let activity of activity.activity">
+            <div class="col-lg-2">
+              <img ngClass="image" [src]="activity.image" alt="image" />
+            </div>
+            
+            <div class="col-lg-10">
+              <span>{{ activity.info }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </mat-card>
+  </div>
+</div>

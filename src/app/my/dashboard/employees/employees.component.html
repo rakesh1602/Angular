@@ -1,0 +1,23 @@
+<div class="container-flex box">
+  <div class="row">
+    <mat-card px-3>
+      <div class="card" *ngFor="let emp of employees">
+        <div>
+          <img class="image" [src]="emp.image" alt="" height="80rem" />
+        </div>
+        <div class="">
+          <span ngClass="name">{{ emp.name }}</span>
+
+          <div ngClass="info">
+            <span
+              ><mat-icon ngClass="star">star</mat-icon>{{ emp.rating }}</span
+            >
+
+            <div class="vertical"></div>
+            <span>{{ emp.deals }}</span>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

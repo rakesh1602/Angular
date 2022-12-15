@@ -1,0 +1,53 @@
+.box {
+  width: 1460px;
+  
+}
+.card {
+  text-align: center;
+  align-items: center;
+  height: 200px;
+  width: 700px;
+}
+
+.image {
+  border-radius: 50%;
+  align-self: center;
+  display: flex;
+  margin: 16px 0 13px 0;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(15, 11, 11);
+}
+
+.star {
+  color: rgb(243, 184, 56);
+  font-size: 15px;
+  margin: 0 0 2px 0;
+}
+
+.vertical {
+  padding-left: 2px;
+  margin: 0 1px 2px;
+}
+
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  width: 1000px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+mat-card{
+  width: 1050px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-left: 20px;
+}

@@ -1,0 +1,53 @@
+<mat-toolbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-1 mt-3">
+        <mat-toolbar-row class="justify-content-between">
+          <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </mat-toolbar-row>
+      </div>
+
+      <div class="logo col-sm-1 mt-4">
+        <img [src]="logo" alt="logo" height="35px" />
+      </div>
+
+      <div class="col-sm-4 mt-4">
+        <form>
+          <input type="text" placeholder="Ask now !!" />
+          <span>
+            <select class="search-btn">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </span>
+        </form>
+      </div>
+
+      <div class="col-sm-3 mt-4">
+        <ul>
+          <li><mat-icon>apps</mat-icon></li>
+          <li><mat-icon>mail</mat-icon></li>
+          <li><mat-icon>notification_important</mat-icon></li>
+          <li><mat-icon>language</mat-icon></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="dropdown">
+            <button class="dropbtn"><img class="user-image" [src]="user" alt="img" height="30rem">
+                <span class="mt-1 px-1">UserName</span>
+                <mat-icon class="user-image-icon ">keyboard_arrow_down</mat-icon></button>
+            <div class="dropdown-content">
+              <a routerLink="#">Logout</a>
+            </div>
+          </div>
+          
+    </div>
+
+      </div>
+    </div>
+ 
+</mat-toolbar>
