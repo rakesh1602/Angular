@@ -1,0 +1,63 @@
+<mat-divider></mat-divider>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="logo" *ngFor="let logo of logo">
+        <button class="button btn">
+          <mat-icon class="icon" routerLink="/home" routerLinkActive="active">{{ logo.icon }}</mat-icon>
+          <mat-card-subtitle class="logo-name" routerLink="/home" routerLinkActive="active">{{ logo.name }}</mat-card-subtitle>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="sidenav">
+        <mat-card>
+          <button
+            class="compose-btn"
+            [routerLink]="'/sidenav/compose'"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-pencil"></i>Compose
+          </button>
+
+          <mat-card-subtitle>MAIN</mat-card-subtitle>
+          <mat-nav-list mat-list-item *ngFor="let item of mainComponent">
+            <button class="button button1">
+              <div class="icons" [class]="item.icon"></div>
+              <a class="link_name" [routerLink]="[item.link]">{{
+                item.link_name
+              }}</a>
+            </button>
+          </mat-nav-list>
+
+          <mat-card-subtitle>FILTER</mat-card-subtitle>
+          <mat-nav-list mat-list-item *ngFor="let item of filter">
+            <button class="button button1">
+              <div class="icons" [class]="item.icon"></div>
+              <a class="link_name" [routerLink]="[item.link]">{{
+                item.link_name
+              }}</a>
+            </button>
+          </mat-nav-list>
+
+          <mat-card-subtitle>LABELS</mat-card-subtitle>
+          <mat-nav-list mat-list-item *ngFor="let item of labels">
+            <button class="button button1">
+              <div class="icons" [class]="item.icon"></div>
+              <a class="link_name" [routerLink]="[item.link]">{{
+                item.link_name
+              }}</a>
+            </button>
+          </mat-nav-list>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

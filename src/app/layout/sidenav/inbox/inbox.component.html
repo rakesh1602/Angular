@@ -1,0 +1,47 @@
+<div class="col-12">
+  <mat-card>
+    <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search in inbox">
+    <br>
+    <mat-divider></mat-divider>
+
+    <input type="checkbox" />
+    <label class="dropdown">
+      <div class="dropdown">
+        <button class="dropbtn mt-4">All</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </label>
+
+    <div class="inbox" *ngFor="let content of inbox | search: searchText">
+      <table>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>
+            <input class="star" type="checkbox" title="bookmark page" checked />
+          </td>
+          <td>
+            <img class="image" [src]="content.image" alt="" height="80rem" />
+          </td>
+          <td>
+            <span class="name"> {{ content.name }}</span
+            >|<span class="subject">{{ content.subject }}</span>
+          </td>
+
+          <!-- <td class="name">{{content.name}} |<tr class="subject">{{content.subject}}</tr></td> -->
+          <!-- <span [class]="content.bg">{{content.badge}}</span> -->
+          <td>
+            <p class="content">{{ content.content }}</p>
+          </td>
+          <td>
+            <span class="badge bg-green">{{ content.badge }}</span>
+          </td>
+          <td class="date">{{ content.date }}</td>
+        </tr>
+      </table>
+    </div>
+  </mat-card>
+</div>

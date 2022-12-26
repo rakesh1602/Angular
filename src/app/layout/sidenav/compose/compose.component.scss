@@ -1,0 +1,45 @@
+mat-form-field{
+    width: 50%;
+}
+
+
+mat-card{
+    position: fixed;
+    height: 91%;
+    overflow-x: scroll;
+    width: 62.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.548);
+    border-radius: 0%;
+    margin-top: 0px;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  .example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+ .btn{
+    justify-content: space-between;
+    margin: 10px;
+ }

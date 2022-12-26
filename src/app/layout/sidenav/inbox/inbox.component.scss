@@ -1,0 +1,170 @@
+
+.badge {
+    border-radius: 8px;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: .7142em;
+    line-height: 12px;
+    background-color: transparent;
+    border: 1px solid;
+    margin-bottom: 5px;
+    border-radius: 14px;
+    
+}
+.bg-green {
+    background-color: #50d38a !important;
+    color: #fff;
+}
+.bg-blush {
+    background-color: #ff758e !important;
+    color: #fff;
+}
+.bg-amber {
+    background-color: #FFC107 !important;
+    color: #fff;
+}
+.bg-red {
+    background-color: #ec3b57 !important;
+    color: #fff;
+}
+.bg-blue {
+    background-color: #60bafd !important;
+    color: #fff;
+}
+
+.star {
+    visibility:hidden;
+    font-size:30px;
+    cursor:pointer;
+    color: yellow;
+    margin: 10px;
+    
+    
+}
+.star:before {
+   content: "\2605";
+   position: absolute;
+   visibility:visible;
+   color: yellow;
+}
+.star:checked:before {
+   content: "\2606";
+   position: absolute;
+   color: yellow;
+   
+}
+
+.image {
+    border-radius: 50%;
+    width: 50px;
+    height: 40px;
+    align-self: center;
+    display: flex;
+    margin: 10px 0 13px 0;
+    padding-left: 10px;
+  }
+
+.name{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+.subject
+{
+    padding: 10px;
+}
+
+.content{
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+.date{
+    font-weight: bold;
+    font-size: x-small;
+    padding: 25px;
+    display: revert;
+}
+
+td{
+    display: inline-block;
+}
+.form-control{
+    width: 500px;
+    margin-left: 185px;
+    //position: fixed;
+    
+}
+
+
+mat-card{
+    position: fixed;
+    height: 90%;
+    overflow-x: scroll;
+    width: 62.5rem;
+    border: 0.1rem solid  rgba(128, 128, 128, 0.548);
+    border-radius: 0%;
+
+
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/* Dropdown Button */
+.dropbtn {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f136;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgba(221, 221, 221, 0.137);}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #ec3b57 ;}
+  
